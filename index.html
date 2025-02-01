@@ -20,6 +20,8 @@
       rel="stylesheet"
     />
 
+    <script src="https://kit.fontawesome.com/318258381a.js" crossorigin="anonymous"></script>
+
     <!-- DaisyUI & Tailwind CDN -->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css"
@@ -28,8 +30,22 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+                'btn-primary': '#FFDC26'
+               
+              }
+            }
+          }
+        }
+      </script>
+
     <style>
-      .font-adlam-display {
+      .font-adlam {
         font-family: "ADLaM Display", serif;
         font-weight: 400;
         font-style: normal;
@@ -43,8 +59,61 @@
       }
     </style>
   </head>
-  <body class="">
-   
-      
+  <body class="font-sora">
+    <!-- header Section -->
+    <header class="container mx-auto">
+      <!-- navbar -->
+        <nav>
+            <div class="navbar bg-base-100">
+                <div class="navbar-start flex gap-3">
+                 <img src="c1-assets/logo-header.png" alt="">
+                  <h2 class="text-2xl hidden md:flex "><a href="">Browse<span class="text-btn-primary">4</span>Pets</a></h2>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                  <ul class="menu menu-horizontal px-1">
+                    <li><a>Find a pet</a></li>
+                    <li><a>Breeds</a></li>
+                    <li><a>Contact us</a></li>
+                  </ul>
+                </div>
+                <div class="navbar-end  ">
+                    <div class="space-x-4 hidden md:flex">
+                        <button class="btn btn-circle btn-ghost"><i class="fa-regular fa-bell"></i></button>
+                    <button btn btn-circle btn-ghost><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <button class="btn btn-outline border-[#FFDC26]">Login</button>
+                  <a class="btn bg-btn-primary">Register</a>
+                    </div>
+                  <!-- dropdown -->
+                  <div class="dropdown md:hidden">
+                    <div tabindex="0" role="button" class="btn btn-ghost ">
+                        <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-7 w-7"
+                        fill="none"
+                        viewBox="0 0 024 24"
+                        stroke="currentColor">
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M4 6h16M4 12h8m-8 6h16" />
+                      </svg>
+                    </div>
+                    <ul
+                      tabindex="0"
+                      class="menu menu-sm dropdown-content  rounded-box z-[1] mt-3 w-52 p-2 shadow -translate-x-36">
+                      <li><a>Find a pet</a></li>
+                    <li><a>Breeds</a></li>
+                    <li><a>Contact us</a></li>
+                    
+                    </ul>
+                  </div>
+                </div>
+                
+              </div>
+        </nav>
+    </header>
+    
+    <!-- Main Section -->
   </body>
 </html>
